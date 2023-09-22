@@ -6,10 +6,9 @@ This repository contains the official pytorch implementation of [Ground-A-Video]
 
 ## 🌱 Abstract
 <b>TL; DR: <font color="red">Ground A Video</font> is the first groundings-driven video editing.<br>
-:o: pretrained Stable Diffusion |
-:o: spatially-continuous guidance |
-:o: spatially-discrete guidance |
-:x: any training</b>
+:o: Pretrained Stable Diffusion |
+:o: Optical Flow, Depth Map, Groundings |
+:x: Any training</b>
 
 <details><summary>Full abstract</summary>
 
