@@ -1,4 +1,4 @@
-# Ground A Video: Zero-shot Grounded Video Editing using Text-to-image Diffusion Models
+# Ground-A-Video: Zero-shot Grounded Video Editing using Text-to-image Diffusion Models
 
 This repository contains the official pytorch implementation of [Ground-A-Video](#).
 <br/> <br/>
