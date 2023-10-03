@@ -29,11 +29,11 @@ This repository contains the official pytorch implementation of [Ground-A-Video]
 </tr>
 
 <tr>
-  <td width=20% style="text-align:center;color:gray;">"A man is walking a dog on the road."</td>
-  <td width=20% style="text-align:center;"><b style='color:blue;'>man</b>, <b style='color:red;'>dog</b>, <b style='color:orange;'>road</b></td>
+  <td width=20% style="text-align:center;color:gray;">"A <ins>man</ins> is walking a <ins>dog</ins> on the <ins>road</ins>."</td>
+  <td width=20% style="text-align:center;">man, dog, road</td>
   <td width=20% style="text-align:center;color:gray;">by ZoeDepth</td>
   <td width=20% style="text-align:center;">by RAFT-large</td>
-  <td width=20% style="text-align:center;color:gray;">"Iron Man is walking a sheep on the lake."</td>
+  <td width=20% style="text-align:center;color:gray;">"<ins>Iron Man</ins> is walking a <ins>sheep</ins> on the <ins>lake</ins>."</td>
 </tr>
 
 <tr>
@@ -44,20 +44,13 @@ This repository contains the official pytorch implementation of [Ground-A-Video]
   <td style colspan="1"><img src="assets/dog_walking/output.gif"></td>  
 </tr>
 
-<tr>
-  <td style="text-align:center;"><b>Input Video</b></td>
-  <td style="text-align:center;"><b>Video Groundings</b></td>
-  <td style="text-align:center;"><b>Depth Map</b></td>
-  <td style="text-align:center;"><b>Optical Flow</b></td>
-  <td style="text-align:center;"><b>Output Video</b></td>
-</tr>
 
 <tr>
-  <td width=20% style="text-align:center;color:gray;">"A rabbit is eating a watermelon on the table."</td>
-  <td width=20% style="text-align:center;"><b style='color:red;'>rabbit</b>, <b style='color:blue;'>watermelon</b>, <b style='color:purple;'>table</b></td>
+  <td width=20% style="text-align:center;color:gray;">"A <ins>rabbit</ins> is eating a <ins>watermelon</ins> on the <ins>table</ins>."</td>
+  <td width=20% style="text-align:center;">rabbit, watermelon, table</td>
   <td width=20% style="text-align:center;color:gray;">by ZoeDepth</td>
   <td width=20% style="text-align:center;">by RAFT-large</td>
-  <td width=20% style="text-align:center;color:gray;">"A squirrel is eating an orange on the grass, under the aurora."</td>
+  <td width=20% style="text-align:center;color:gray;">"A <ins>squirrel</ins> is eating an <ins>orange</ins> on the <ins>grass</ins>, <ins>under the aurora</ins>."</td>
 </tr>
 
 <tr>
