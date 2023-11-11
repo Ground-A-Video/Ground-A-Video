@@ -18,6 +18,10 @@ This repository contains the official pytorch implementation of [Ground-A-Video]
 > We introduce a novel groundings guided video-to-video translation framework called Ground-A-Video. Recent endeavors in video editing have showcased promising results in single-attribute editing or style transfer tasks, either by training T2V models on text-video data or adopting training-free methods. However, when confronted with the complexities of multi-attribute editing scenarios, they exhibit shortcomings such as omitting or overlooking intended attribute changes, modifying the wrong elements of the input video, and failing to preserve regions of the input video that should remain intact. Ground-A-Video attains temporally consistent multi-attribute editing of input videos in a training-free manner without aforementioned shortcomings. Central to our method is the introduction of cross-frame gated attention which incorporates groundings information into the latent representations in a temporally consistent fashion, along with Modulated Cross-Attention and optical flow guided inverted latents smoothing. Extensive experiments and applications demonstrate that Ground-A-Video's zero-shot capacity outperforms other baseline methods in terms of edit-accuracy and frame consistency.
 </details>
 
+## :memo: News
+* [11/11/2023] The paper is currently under review process. We plan to make the code public once the process is done, since there could be not minor modifications.
+  <br> (Apologies for the late release, but please stay tuned!)
+
 ## Teaser
 <table class="center">
 <tr>
@@ -67,3 +71,12 @@ This repository contains the official pytorch implementation of [Ground-A-Video]
 ## Code, Data, Environment
 
 <strong style="color:darkblue;">Coming soon !</strong>
+
+## Shoutouts
+* Ground-A-Video builds upon huge open-source projects:<br>
+  [diffusers](https://github.com/huggingface/diffusers), [Stable Diffusion](https://github.com/Stability-AI/stablediffusion),
+  [GLIGEN](https://github.com/gligen/GLIGEN), [ControlNet](https://github.com/lllyasviel/ControlNet), [GLIP](https://github.com/microsoft/GLIP), [RAFT](https://github.com/princeton-vl/RAFT).
+  <br>Thank you for open-sourcing!<br>
+* Evaluation of Ground-A-Video was made possible thanks to open-sourced SOTA baselines:<br>
+  [Tune-A-Video](https://github.com/showlab/Tune-A-Video), [Control-A-Video](https://github.com/Weifeng-Chen/control-a-video), [ControlVideo](https://github.com/YBYBZhang/ControlVideo) and RunwayML's web-based product [Gen-1](https://research.runwayml.com/gen1)<br>
+  Please check out their works too :) <br>
