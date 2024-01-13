@@ -82,8 +82,9 @@ pip install -r requirements.txt
 git lfs install
 git clone https://huggingface.co/gligen/gligen-inpainting-text-box
 ```
-This command will locate the GLIGEN pretrained weights as "./gligen-inpainting-text-box/diffusion_pytorch_model.bin"  
-Or you can download with web interface at [huggingface](https://huggingface.co/gligen/gligen-inpainting-text-box/tree/main).
+This command will locate the GLIGEN pretrained weights as   
+<i>./gligen-inpainting-text-box/diffusion_pytorch_model.bin</i>  
+Or download with web interface at [huggingface](https://huggingface.co/gligen/gligen-inpainting-text-box/tree/main).
 
 
 ## More Results
@@ -119,8 +120,7 @@ Or you can download with web interface at [huggingface](https://huggingface.co/g
 ## Shoutouts
 * Ground-A-Video builds upon huge open-source projects:<br>
   [diffusers](https://github.com/huggingface/diffusers), [Stable Diffusion](https://github.com/Stability-AI/stablediffusion),
-  [GLIGEN](https://github.com/gligen/GLIGEN), [ControlNet](https://github.com/lllyasviel/ControlNet), [GLIP](https://github.com/microsoft/GLIP), [RAFT](https://github.com/princeton-vl/RAFT).
+  <b>[GLIGEN](https://github.com/gligen/GLIGEN)</b>, [ControlNet](https://github.com/lllyasviel/ControlNet), [GLIP](https://github.com/microsoft/GLIP), [RAFT](https://github.com/princeton-vl/RAFT).
   <br>Thank you for open-sourcing!<br>
 * Evaluation of Ground-A-Video was made possible thanks to open-sourced SOTA baselines:<br>
   [Tune-A-Video](https://github.com/showlab/Tune-A-Video), [Control-A-Video](https://github.com/Weifeng-Chen/control-a-video), [ControlVideo](https://github.com/YBYBZhang/ControlVideo) and RunwayML's web-based product [Gen-1](https://research.runwayml.com/gen1)<br>
-  Please check out their works too :) <br>
