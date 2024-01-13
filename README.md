@@ -77,15 +77,27 @@ pip install -r requirements.txt
 ```
 
 ### Weights
+<strong>Important: Ensure that you download the model weights before executing the codes</strong>
 
 ```shell
 git lfs install
 git clone https://huggingface.co/gligen/gligen-inpainting-text-box
+git clone https://huggingface.co/ground-a-video/unet3d_ckpts
 ```
-This command will locate the GLIGEN pretrained weights as   
-<i>./gligen-inpainting-text-box/diffusion_pytorch_model.bin</i>  
-Or download with web interface at [huggingface](https://huggingface.co/gligen/gligen-inpainting-text-box/tree/main).
 
+These commands will place the pretrained GLIGEN weights at:  
+- `./gligen-inpainting-text-box/diffusion_pytorch_model.bin`  
+- `./ground-a-video/unet3d_ckpts/diffusion_pytorch_model.bin`  
+- `./ground-a-video/unet3d_ckpts/config.json`  
+<br>
+Alternatively, you can manually download the weights using the web interface from the following links:
+
+- [GLIGEN](https://huggingface.co/gligen/gligen-inpainting-text-box/tree/main)  
+- [Ground A Video](https://huggingface.co/ground-a-video/unet3d_ckpts/tree/main)  
+
+### Data
+The input video frames should be stored in `video_images` , organized by each video's name.  
+Pre-computed groundings, including bounding box coordinates and corresponding text annotations, for each video are available in configuration files located at `video_configs/{video_name}.yaml`
 
 ## More Results
 <table class="center">
