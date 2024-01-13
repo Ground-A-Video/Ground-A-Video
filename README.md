@@ -68,9 +68,53 @@ This repository contains the official pytorch implementation of [Ground-A-Video]
 </table>
 
 
-## Code, Data, Environment
+## Setup
 
-<strong style="color:darkblue;">Coming soon !</strong>
+### Requirements
+
+```shell
+pip install -r requirements.txt
+```
+
+### Weights
+
+```shell
+git lfs install
+git clone https://huggingface.co/gligen/gligen-inpainting-text-box
+```
+This command will locate the GLIGEN pretrained weights as "./gligen-inpainting-text-box/diffusion_pytorch_model.bin"  
+Or you can download with web interface at [huggingface](https://huggingface.co/gligen/gligen-inpainting-text-box/tree/main).
+
+
+## More Results
+<table class="center">
+  <tr>
+    <td style="text-align:center;"><b>Input Videos</b></td>
+    <td style="text-align:center;" colspan="1"><b>Output Videos</b></td>
+  </tr>
+  <tr>
+    <td><img src="https://ground-a-video.github.io/static/gifs/cat_flower/input.gif" width="384" height="384"></td>
+    <td><img src="https://ground-a-video.github.io/static/gifs/cat_flower/three3.gif" width="384" height="384"></td>
+  </tr>
+  <tr>
+    <td><img src="https://ground-a-video.github.io/static/gifs/swan/input.gif" width="384" height="384"></td>
+    <td><img src="https://ground-a-video.github.io/static/gifs/swan/blue_snowy_lagoon.gif" width="384" height="384"></td>
+  </tr>
+  <tr>
+    <td><img src="https://ground-a-video.github.io/static/gifs/bird_forest/input.gif" width="384" height="384"></td>
+    <td><img src="https://ground-a-video.github.io/static/gifs/bird_forest/output2.gif" width="384" height="384"></td>
+  </tr>
+  <tr>
+    <td><img src="https://ground-a-video.github.io/static/gifs/surfing/input.gif" width="384" height="384"></td>
+    <td><img src="https://ground-a-video.github.io/static/gifs/surfing/output2.gif" width="384" height="384"></td>
+  </tr>
+  <tr>
+    <td><img src="https://ground-a-video.github.io/static/gifs/skiing/input.gif" width="384" height="384"></td>
+    <td><img src="https://ground-a-video.github.io/static/gifs/skiing/output2.gif" width="384" height="384"></td>
+  </tr>
+ 
+  
+</table>
 
 ## Shoutouts
 * Ground-A-Video builds upon huge open-source projects:<br>
