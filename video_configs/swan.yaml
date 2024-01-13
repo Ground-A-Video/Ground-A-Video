@@ -1,0 +1,31 @@
+ckpt: "gligen-inpainting-text-box/diffusion_pytorch_model.bin"
+input_images_path: "video_images/swan"
+prompt: "a blue swan with a red beak swimming in a lagoon near a wall and snowy bushes"
+source_prompt: "a black swan with a red beak swimming in a river near a wall and bushes"
+phrases:
+  - ['blue swan', 'snowy bushes', 'lagoon']
+  - ['blue swan', 'snowy bushes', 'lagoon']
+  - ['blue swan', 'snowy bushes', 'lagoon']
+  - ['blue swan', 'snowy bushes', 'lagoon']
+  - ['blue swan', 'snowy bushes', 'lagoon']
+  - ['blue swan', 'snowy bushes', 'lagoon']
+  - ['blue swan', 'snowy bushes', 'lagoon']
+  - ['blue swan', 'snowy bushes', 'lagoon']
+locations:  # [ [location of swan], [location of snowy], [location of lagoon] ] x num_frames
+  - [ [0.00, 0.15, 0.68, 0.81], [0.00, 0.00, 1.00, 0.29], [0.00, 0.29, 1.00, 1.00]]
+  - [ [0.00, 0.13, 0.72, 0.79], [0.00, 0.00, 1.00, 0.29], [0.00, 0.29, 1.00, 1.00]]
+  - [ [0.00, 0.14, 0.74, 0.81], [0.00, 0.00, 1.00, 0.30], [0.00, 0.30, 1.00, 1.00]]
+  - [ [0.00, 0.21, 0.74, 0.86], [0.00, 0.00, 1.00, 0.32], [0.00, 0.32, 1.00, 1.00]]
+  - [ [0.00, 0.21, 0.71, 0.88], [0.00, 0.00, 1.00, 0.32], [0.00, 0.32, 1.00, 1.00]]
+  - [ [0.00, 0.20, 0.69, 0.90], [0.00, 0.00, 1.00, 0.32], [0.00, 0.32, 1.00, 1.00]]
+  - [ [0.00, 0.20, 0.69, 0.89], [0.00, 0.00, 1.00, 0.32], [0.00, 0.32, 1.00, 1.00]]
+  - [ [0.00, 0.20, 0.69, 0.90], [0.00, 0.00, 1.00, 0.32], [0.00, 0.32, 1.00, 1.00]]
+source_phrases:
+  - ['black swan', 'bushes', 'river']
+  - ['black swan', 'bushes', 'river']
+  - ['black swan', 'bushes', 'river']
+  - ['black swan', 'bushes', 'river']
+  - ['black swan', 'bushes', 'river']
+  - ['black swan', 'bushes', 'river']
+  - ['black swan', 'bushes', 'river']
+  - ['black swan', 'bushes', 'river']

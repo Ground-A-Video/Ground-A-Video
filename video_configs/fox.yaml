@@ -1,0 +1,31 @@
+ckpt: "gligen-inpainting-text-box/diffusion_pytorch_model.bin"
+input_images_path: "video_images/fox"
+prompt: "a puppy sitting in the desert, on sunrise, early morning"
+source_prompt: "a white fox sitting in the grass"
+phrases:
+  - ['puppy', 'sunrise, early morning', 'desert']
+  - ['puppy', 'sunrise, early morning', 'desert']
+  - ['puppy', 'sunrise, early morning', 'desert']
+  - ['puppy', 'sunrise, early morning', 'desert']
+  - ['puppy', 'sunrise, early morning', 'desert']
+  - ['puppy', 'sunrise, early morning', 'desert']
+  - ['puppy', 'sunrise, early morning', 'desert']
+  - ['puppy', 'sunrise, early morning', 'desert']
+locations:  # [ [location of puppy], [location of sunrise], [location of desert] ] x num_frames
+  - [ [0.02, 0.27, 0.97, 0.85], [0.00, 0.00, 1.00, 0.70], [0.00, 0.71, 1.00, 1.00]]
+  - [ [0.02, 0.27, 0.97, 0.85], [0.00, 0.00, 1.00, 0.70], [0.00, 0.71, 1.00, 1.00]]
+  - [ [0.04, 0.25, 0.98, 0.85], [0.00, 0.00, 1.00, 0.70], [0.00, 0.71, 1.00, 1.00]]
+  - [ [0.08, 0.25, 1.00, 0.84], [0.00, 0.00, 1.00, 0.70], [0.00, 0.70, 1.00, 1.00]]
+  - [ [0.11, 0.25, 1.00, 0.83], [0.00, 0.00, 1.00, 0.70], [0.00, 0.70, 1.00, 1.00]]
+  - [ [0.03, 0.21, 1.00, 0.81], [0.00, 0.00, 1.00, 0.70], [0.00, 0.68, 1.00, 1.00]]
+  - [ [0.00, 0.23, 1.00, 0.80], [0.00, 0.00, 1.00, 0.70], [0.00, 0.68, 1.00, 1.00]]
+  - [ [0.05, 0.11, 1.00, 0.78], [0.00, 0.00, 1.00, 0.70], [0.00, 0.63, 1.00, 1.00]]
+source_phrases:
+  - ['white fox', '', 'grass']
+  - ['white fox', '', 'grass']
+  - ['white fox', '', 'grass']
+  - ['white fox', '', 'grass']
+  - ['white fox', '', 'grass']
+  - ['white fox', '', 'grass']
+  - ['white fox', '', 'grass']
+  - ['white fox', '', 'grass']

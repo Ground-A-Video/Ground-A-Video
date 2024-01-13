@@ -1,0 +1,31 @@
+ckpt: "gligen-inpainting-text-box/diffusion_pytorch_model.bin"
+input_images_path: "video_images/squirrel_carrot"
+prompt: "a fennec fox is eating a sausage on the dune, in the desert"
+source_prompt: "a squirrel is eating a carrot"
+phrases:
+  - ['fennec fox', 'sausage', 'dune', 'desert']
+  - ['fennec fox', 'sausage', 'dune', 'desert']
+  - ['fennec fox', 'sausage', 'dune', 'desert']
+  - ['fennec fox', 'sausage', 'dune', 'desert']
+  - ['fennec fox', 'sausage', 'dune', 'desert']
+  - ['fennec fox', 'sausage', 'dune', 'desert']
+  - ['fennec fox', 'sausage', 'dune', 'desert']
+  - ['fennec fox', 'sausage', 'dune', 'desert']
+locations:  # [ [location of fox], [location of sausage], [location of dune], [location of desert] ] x num_frames
+  - [ [0.23, 0.00, 0.82, 0.93], [0.32, 0.46, 0.66, 0.98], [0.00, 0.86, 1.00, 1.00], [0.00, 0.00, 1.00, 0.86]] 
+  - [ [0.22, 0.00, 0.82, 0.93], [0.35, 0.47, 0.66, 0.98], [0.00, 0.86, 1.00, 1.00], [0.00, 0.00, 1.00, 0.86]]
+  - [ [0.23, 0.00, 0.82, 0.93], [0.32, 0.46, 0.66, 0.98], [0.00, 0.86, 1.00, 1.00], [0.00, 0.00, 1.00, 0.86]]
+  - [ [0.23, 0.00, 0.82, 0.93], [0.28, 0.48, 0.65, 0.98], [0.00, 0.86, 1.00, 1.00], [0.00, 0.00, 1.00, 0.86]]
+  - [ [0.23, 0.00, 0.82, 0.93], [0.28, 0.48, 0.65, 0.98], [0.00, 0.86, 1.00, 1.00], [0.00, 0.00, 1.00, 0.86]]
+  - [ [0.23, 0.00, 0.82, 0.93], [0.28, 0.48, 0.65, 0.98], [0.00, 0.86, 1.00, 1.00], [0.00, 0.00, 1.00, 0.86]]
+  - [ [0.23, 0.00, 0.82, 0.93], [0.27, 0.48, 0.65, 0.98], [0.00, 0.86, 1.00, 1.00], [0.00, 0.00, 1.00, 0.86]]
+  - [ [0.23, 0.00, 0.82, 0.93], [0.25, 0.50, 0.64, 0.98], [0.00, 0.86, 1.00, 1.00], [0.00, 0.00, 1.00, 0.86]]
+source_phrases:
+  - ['squirrel', 'carrot', '', '']
+  - ['squirrel', 'carrot', '', '']
+  - ['squirrel', 'carrot', '', '']
+  - ['squirrel', 'carrot', '', '']
+  - ['squirrel', 'carrot', '', '']
+  - ['squirrel', 'carrot', '', '']
+  - ['squirrel', 'carrot', '', '']
+  - ['squirrel', 'carrot', '', '']

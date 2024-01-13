@@ -1,0 +1,31 @@
+ckpt: "gligen-inpainting-text-box/diffusion_pytorch_model.bin"
+input_images_path: "video_images/rabbit_strawberry"
+prompt: "a white rabbit is eating apples"
+source_prompt: "a rabbit is eating strawberries"
+phrases:
+  - ['white rabbit', 'apples']
+  - ['white rabbit', 'apples']
+  - ['white rabbit', 'apples']
+  - ['white rabbit', 'apples']
+  - ['white rabbit', 'apples']
+  - ['white rabbit', 'apples']
+  - ['white rabbit', 'apples']
+  - ['white rabbit', 'apples']
+locations:  # [ [location of rabbit], [location of apples] ] x num_frames
+  - [ [0.26, 0.04, 0.84, 0.70], [0.00, 0.55, 1.00, 1.00], ]
+  - [ [0.26, 0.02, 0.84, 0.70], [0.00, 0.55, 1.00, 1.00], ]
+  - [ [0.26, 0.04, 0.84, 0.69], [0.00, 0.55, 1.00, 1.00], ]
+  - [ [0.22, 0.03, 0.83, 0.68], [0.00, 0.54, 1.00, 1.00], ]
+  - [ [0.24, 0.00, 0.83, 0.67], [0.00, 0.52, 1.00, 1.00], ]
+  - [ [0.28, 0.00, 0.83, 0.67], [0.00, 0.50, 1.00, 1.00], ]
+  - [ [0.26, 0.00, 0.83, 0.67], [0.00, 0.52, 1.00, 1.00], ]
+  - [ [0.26, 0.00, 0.84, 0.67], [0.00, 0.54, 1.00, 1.00], ]
+source_phrases:
+  - ['rabbit', 'strawberries']
+  - ['rabbit', 'strawberries']
+  - ['rabbit', 'strawberries']
+  - ['rabbit', 'strawberries']
+  - ['rabbit', 'strawberries']
+  - ['rabbit', 'strawberries']
+  - ['rabbit', 'strawberries']
+  - ['rabbit', 'strawberries']
