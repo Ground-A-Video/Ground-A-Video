@@ -48,7 +48,6 @@ This repository contains the official pytorch implementation of [Ground-A-Video]
   <td style colspan="1"><img src="assets/dog_walking/output.gif"></td>  
 </tr>
 
-
 <tr>
   <td width=20% style="text-align:center;color:gray;">"A <ins>rabbit</ins> is eating a <ins>watermelon</ins> on the <ins>table</ins>."</td>
   <td width=20% style="text-align:center;">rabbit, watermelon, table</td>
@@ -99,6 +98,17 @@ Alternatively, you can manually download the weights using the web interface fro
 The input video frames should be stored in `video_images` , organized by each video's name.  
 Pre-computed groundings, including bounding box coordinates and corresponding text annotations, for each video are available in configuration files located at `video_configs/{video_name}.yaml`
 
+
+## Usage
+
+### Inference
+Ground-A-Video is a training-free framework. Thus, simply run the inference script via:
+
+```bash
+
+```
+
+
 ## More Results
 <table class="center">
   <tr>
@@ -125,9 +135,15 @@ Pre-computed groundings, including bounding box coordinates and corresponding te
     <td><img src="https://ground-a-video.github.io/static/gifs/skiing/input.gif" width="384" height="384"></td>
     <td><img src="https://ground-a-video.github.io/static/gifs/skiing/output2.gif" width="384" height="384"></td>
   </tr>
- 
-  
 </table>
+
+
+## Citation
+If you like our work, please cite our paper.
+
+```bibtex
+
+```
 
 ## Shoutouts
 * Ground-A-Video builds upon huge open-source projects:<br>
