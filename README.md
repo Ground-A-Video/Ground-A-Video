@@ -75,8 +75,9 @@ This repository contains the official pytorch implementation of [Ground-A-Video]
 git clone https://github.com/Ground-A-Video/Ground-A-Video.git
 cd Ground-A-Video
 
-conda env create -f enviornment.yaml
+conda create -n groundvideo python=3.8
 conda activate groundvideo
+pip install -r requirements.txt
 ```
 
 ### Weights
@@ -123,6 +124,8 @@ python main.py --config configs/rabbit_watermelon.yaml --folder outputs/rabbit_w
 - `--guidance_scale`: Sets the CFG scale. Default is 12.5.
 - `--flow_smooth_threshold`: Threshold for optical flow guided smoothing. Default is 0.2.
 - `--controlnet_conditioning_scale`: Sets the conditioning scale for ControlNet. Default is 1.0.
+- `--nti`: Whether to perfrom Null-text Optimization after DDIM Inversion. Default is False.  
+  (If your CUDA Version is 11.4, then you can set is as True. If your CUDA Version is 12.2 or higher, set it as False: The codes are implemented using fp16 dtypes but in 12.2 higher CUDA version, the gradient backpropagation incurs errors/)
 
 ## More Results
 <table class="center">
