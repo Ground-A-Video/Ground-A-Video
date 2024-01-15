@@ -197,6 +197,7 @@ class NullInversion:
         verbose=True, 
         null_base_lr=1e-2,
         batch_size=1,
+        nti=True,
         ):
         self.init_prompt(prompt, batch_size, text_encoder)
         if verbose:
@@ -204,6 +205,9 @@ class NullInversion:
         ddim_latents = self.ddim_inversion(
             latents, grounding_input, inpainting_extra_input)
 
+        if not nti:
+            return ddim_latents[-1]
+            
         if verbose:
             print("Null-text optimization...")
         uncond_embeddings = self.null_optimization(
