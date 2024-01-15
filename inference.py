@@ -427,6 +427,7 @@ def run(meta, config, starting_noise=None):
                 null_base_lr=1e-2,
                 batch_size=args.batch_size,
                 verbose=False,
+                nti=args.nti,
             )
             '''
             [Shape of Outputs]
@@ -442,12 +443,14 @@ def run(meta, config, starting_noise=None):
     starting_noise = ddim_inv_aggregated
 
     # aggregate uncondtional embeddings
-    uncond_embeddings_aggregated = uncond_embeddings_list[0]
-    for i in range(1, args.clip_length):
-        ith_frame_uncond_embeddings_list = uncond_embeddings_list[i]
-        for j in range(args.ddim_inv_steps):
-            uncond_embeddings_aggregated[j] = torch.cat([uncond_embeddings_aggregated[j], ith_frame_uncond_embeddings_list[j]], dim=0)
-    #uc = uncond_embeddings_aggregated
+    if args.nti:
+        uncond_embeddings_aggregated = uncond_embeddings_list[0]
+        for i in range(1, args.clip_length):
+            ith_frame_uncond_embeddings_list = uncond_embeddings_list[i]
+            for j in range(args.ddim_inv_steps):
+                uncond_embeddings_aggregated[j] = torch.cat([uncond_embeddings_aggregated[j], ith_frame_uncond_embeddings_list[j]], dim=0)
+    else:
+        uncond_embeddings_aggregated=None
 
     del null_inversion
     unet2d.cpu()
