@@ -206,7 +206,7 @@ class NullInversion:
             latents, grounding_input, inpainting_extra_input)
 
         if not nti:
-            return ddim_latents[-1]
+            return ddim_latents[-1], None
             
         if verbose:
             print("Null-text optimization...")
