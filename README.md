@@ -4,9 +4,9 @@ This repository contains the official pytorch implementation of [Ground-A-Video]
 <br/> <br/>
 [![Project Website](https://img.shields.io/badge/Project-Website-orange)](https://ground-a-video.github.io/)
 
-## 🌱 Abstract
-<b><font color="red">Ground A Video</font> is the first groundings-driven video editing.<br>
-<font color="red">Ground A Video</font> is the first video editing framework that integrates spatially-continuous and spatially-discrete conditions.<br>
+## Abstract
+<b><font color="red">Ground A Video</font> is the first groundings-driven video editing framework, specially designed for [Multi-Attribute Video Editing](#).<br>
+<font color="red">Ground A Video</font> is the first framework to intergrate spatially-continuous and spatially-discrete conditions.<br>
 <font color="red">Ground A Video</font> does not neglect edits, confuse edits, but does preserve non-target regions.<br>
 :o: Pretrained Stable Diffusion |
 :o: Optical Flow, Depth Map, Groundings |
@@ -18,7 +18,7 @@ This repository contains the official pytorch implementation of [Ground-A-Video]
 > We introduce a novel groundings guided video-to-video translation framework called Ground-A-Video. Recent endeavors in video editing have showcased promising results in single-attribute editing or style transfer tasks, either by training T2V models on text-video data or adopting training-free methods. However, when confronted with the complexities of multi-attribute editing scenarios, they exhibit shortcomings such as omitting or overlooking intended attribute changes, modifying the wrong elements of the input video, and failing to preserve regions of the input video that should remain intact. Ground-A-Video attains temporally consistent multi-attribute editing of input videos in a training-free manner without aforementioned shortcomings. Central to our method is the introduction of cross-frame gated attention which incorporates groundings information into the latent representations in a temporally consistent fashion, along with Modulated Cross-Attention and optical flow guided inverted latents smoothing. Extensive experiments and applications demonstrate that Ground-A-Video's zero-shot capacity outperforms other baseline methods in terms of edit-accuracy and frame consistency.
 </details>
 
-## :memo: News
+## News
 * [11/11/2023] The paper is currently under review process. We plan to make the code public once the process is done, since there could be not minor modifications.
   <br> (Apologies for the late release, but please stay tuned!)
 
@@ -72,27 +72,34 @@ This repository contains the official pytorch implementation of [Ground-A-Video]
 ### Requirements
 
 ```shell
-pip install -r requirements.txt
+git clone https://github.com/Ground-A-Video/Ground-A-Video.git
+cd Ground-A-Video
+
+conda env create -f enviornment.yaml
+conda activate groundvideo
 ```
 
 ### Weights
-<strong>Important: Ensure that you download the model weights before executing the codes</strong>
+<strong>Important: Ensure that you download the model weights before executing the scripts</strong>
 
 ```shell
 git lfs install
 git clone https://huggingface.co/gligen/gligen-inpainting-text-box
 git clone https://huggingface.co/ground-a-video/unet3d_ckpts
+git clone https://huggingface.co/lllyasviel/control_v11f1p_sd15_depth
 ```
 
 These commands will place the pretrained GLIGEN weights at:  
-- `./gligen-inpainting-text-box/diffusion_pytorch_model.bin`  
-- `./ground-a-video/unet3d_ckpts/diffusion_pytorch_model.bin`  
-- `./ground-a-video/unet3d_ckpts/config.json`  
-<br>
+- `Ground-A-Video/gligen-inpainting-text-box/diffusion_pytorch_model.bin`  
+- `Ground-A-Video/unet3d_ckpts/diffusion_pytorch_model.bin`  
+- `Ground-A-Video/unet3d_ckpts/config.json`
+- `Ground-A-Video/control_v11f1p_sd15_depth/diffusion_pytorch_model.bin`  
+- `Ground-A-Video/control_v11f1p_sd15_depth/config.json`
+  
 Alternatively, you can manually download the weights using the web interface from the following links:
-
 - [GLIGEN](https://huggingface.co/gligen/gligen-inpainting-text-box/tree/main)  
-- [Ground A Video](https://huggingface.co/ground-a-video/unet3d_ckpts/tree/main)  
+- [Ground A Video](https://huggingface.co/ground-a-video/unet3d_ckpts/tree/main)
+- [ControlNet](https://huggingface.co/lllyasviel/control_v11f1p_sd15_depth/tree/main)  
 
 ### Data
 The input video frames should be stored in `video_images` , organized by each video's name.  
@@ -102,12 +109,20 @@ Pre-computed groundings, including bounding box coordinates and corresponding te
 ## Usage
 
 ### Inference
-Ground-A-Video is a training-free framework. Thus, simply run the inference script via:
+Ground-A-Video is designed to be a training-free framework. To run the inference script, use the following command:
 
 ```bash
-
+python main.py --config configs/rabbit_watermelon.yaml --folder outputs/rabbit_watermelon
 ```
-
+#### Arguments
+- `--config`: Specifies the path to the configuration file. Modify the config files under `video_configs` as needed
+- `--folder`: Designates the directory where output videos will be saved
+- `--clip_length`: Sets the number of input video frames. Default is 8.
+- `--denoising_steps`: Defines the number of denoising steps. Default is 50.
+- `--ddim_inv_steps`: Determines the number of steps for per-frame DDIM inversion and Null-text Optimization. Default is 20.
+- `--guidance_scale`: Sets the CFG scale. Default is 12.5.
+- `--flow_smooth_threshold`: Threshold for optical flow guided smoothing. Default is 0.2.
+- `--controlnet_conditioning_scale`: Sets the conditioning scale for ControlNet. Default is 1.0.
 
 ## More Results
 <table class="center">
