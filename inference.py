@@ -298,15 +298,15 @@ def run(meta, config, starting_noise=None):
         weight_dtype = torch.bfloat16
 
 
-    # ======================================================= #
-    # GLGIEN modules: "gligen/gligen-inpainting-text-box"     #
-    # UNet(only): "hyeonho-jeong-video/Ground-A-Video-UNet3D" #
-    # ControlNet: "lllyasviel/control_v11f1p_sd15_depth"      #
-    # ======================================================= #
+    # ==================================================== #
+    # GLGIEN modules: "gligen/gligen-inpainting-text-box"  #
+    # UNet(only): "ground-a-video/unet3d_ckpts"            #
+    # ControlNet: "lllyasviel/control_v11f1p_sd15_depth"   #
+    # ==================================================== #
     autoencoder, text_encoder, diffusion, config = load_ckpt(meta["ckpt"])  # HuggingFace: "gligen/gligen-inpainting-text-box/diffusion_pytorch_model.bin"
-    model = load_unet3d("ground-a-video/unet3d_ckpts")
-    unet2d = load_unet2d("ground-a-video/unet3d_ckpts")                     # HuggingFace: "ground-a-video/unet3d_ckpts"
-    controlnet = ControlNetModel3D.from_2d_model("lllyasviel/control_v11f1p_sd15_depth").eval()
+    model = load_unet3d("unet3d_ckpts")
+    unet2d = load_unet2d("unet3d_ckpts")                     # HuggingFace: "ground-a-video/unet3d_ckpts"
+    controlnet = ControlNetModel3D.from_2d_model("control_v11f1p_sd15_depth").eval()
 
     autoencoder.to(accelerator.device, dtype=weight_dtype)
     text_encoder.to(accelerator.device, dtype=weight_dtype)
