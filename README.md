@@ -5,12 +5,11 @@ This repository contains the official pytorch implementation of [Ground-A-Video]
 [![Project Website](https://img.shields.io/badge/Project-Website-orange)](https://ground-a-video.github.io/)
 
 ## Abstract
-<b><font color="red">Ground A Video</font> is the first groundings-driven video editing framework, specially designed for [Multi-Attribute Video Editing](#).<br>
-<font color="red">Ground A Video</font> is the first framework to intergrate spatially-continuous and spatially-discrete conditions.<br>
-<font color="red">Ground A Video</font> does not neglect edits, confuse edits, but does preserve non-target regions.<br>
-:o: Pretrained Stable Diffusion |
-:o: Optical Flow, Depth Map, Groundings |
-:x: Any training</b>
+<strong>Ground A Video</strong> is the first groundings-driven video editing framework, specially designed for <strong>Multi-Attribute Video Editing</strong>.  
+<strong>Ground A Video</strong> is the first framework to intergrate spatially-continuous and spatially-discrete conditions.  
+<strong>Ground A Video</strong> does not neglect edits, confuse edits, but does preserve non-target regions.  <br>
+<strong>[TL;DR]</strong> Stable Diffusion 3D + ControlNet 3D + GLIGEN 3D + Optical Flow Smoothing = Ground-A-Video
+
 
 <details><summary>Full abstract</summary>
 
@@ -19,8 +18,8 @@ This repository contains the official pytorch implementation of [Ground-A-Video]
 </details>
 
 ## News
-* [11/11/2023] The paper is currently under review process. We plan to make the code public once the process is done, since there could be not minor modifications.
-  <br> (Apologies for the late release, but please stay tuned!)
+* [11/11/2023] The paper is currently under review process.
+* [01/15/2024] Code released!
 
 ## Teaser
 <table class="center">
@@ -125,7 +124,7 @@ python main.py --config configs/rabbit_watermelon.yaml --folder outputs/rabbit_w
 - `--flow_smooth_threshold`: Threshold for optical flow guided smoothing. Default is 0.2.
 - `--controlnet_conditioning_scale`: Sets the conditioning scale for ControlNet. Default is 1.0.
 - `--nti`: Whether to perfrom Null-text Optimization after DDIM Inversion. Default is False.  
-  (If your CUDA Version is 11.4, then you can set is as True. If your CUDA Version is 12.2 or higher, set it as False: The codes are implemented using fp16 dtypes but in 12.2 higher CUDA version, the gradient backpropagation incurs errors/)
+  (If your CUDA Version is 11.4, then you can set is as True. If your CUDA Version is 12.2 or higher, set it as False: The codes are implemented using fp16 dtypes but in 12.2 higher CUDA version, gradient backpropagation from nti incurs errors)
 
 ## More Results
 <table class="center">
@@ -163,10 +162,8 @@ If you like our work, please cite our paper.
 
 ```
 
-## Shoutouts
+## Acknowledgement
 * Ground-A-Video builds upon huge open-source projects:<br>
   [diffusers](https://github.com/huggingface/diffusers), [Stable Diffusion](https://github.com/Stability-AI/stablediffusion),
   <b>[GLIGEN](https://github.com/gligen/GLIGEN)</b>, [ControlNet](https://github.com/lllyasviel/ControlNet), [GLIP](https://github.com/microsoft/GLIP), [RAFT](https://github.com/princeton-vl/RAFT).
   <br>Thank you for open-sourcing!<br>
-* Evaluation of Ground-A-Video was made possible thanks to open-sourced SOTA baselines:<br>
-  [Tune-A-Video](https://github.com/showlab/Tune-A-Video), [Control-A-Video](https://github.com/Weifeng-Chen/control-a-video), [ControlVideo](https://github.com/YBYBZhang/ControlVideo) and RunwayML's web-based product [Gen-1](https://research.runwayml.com/gen1)<br>
