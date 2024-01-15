@@ -25,6 +25,7 @@ if __name__ == "__main__":
     parser.add_argument("--a_prompt", type=str, default='best quality, extremely detailed')
     parser.add_argument("--controlnet_conditioning_scale", type=float, default=1.0)
     parser.add_argument("--flow_smooth_threshold", type=float, default=0.2)
+    parser.add_argument("--nti", type=bool, default=False)
     
     args = vars(parser.parse_args())
     meta = load_meta_from_yaml(args["config"])
