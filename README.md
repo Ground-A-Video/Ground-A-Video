@@ -1,8 +1,14 @@
 # Ground-A-Video: Zero-shot Grounded Video Editing using Text-to-image Diffusion Models
+This repository contains the official pytorch implementation of [Ground-A-Video](https://arxiv.org/abs/2310.01107).
+<br/> 
+**[ICLR 2024] [Ground-A-Video: Zero-shot Grounded Video Editing using Text-to-image Diffusion Models](https://arxiv.org/abs/2310.01107)**
+<br>
+[Hyeonho Jeong](https://scholar.google.com/citations?user=Pa7EfsEAAAAJ&hl=ko&oi=sra), 
+[Jong Chul Ye](https://scholar.google.com/citations?user=HNMjoNEAAAAJ&hl=ko&oi=sra)
+<br>
 
-This repository contains the official pytorch implementation of [Ground-A-Video](#).
-<br/> <br/>
 [![Project Website](https://img.shields.io/badge/Project-Website-orange)](https://ground-a-video.github.io/)
+[![arXiv](https://img.shields.io/badge/arXiv-2310.01107-b31b1b.svg)](https://arxiv.org/abs/2310.01107)
 
 ## Abstract
 <strong>Ground A Video</strong> is the first groundings-driven video editing framework, specially designed for <strong>Multi-Attribute Video Editing</strong>.  
@@ -159,7 +165,12 @@ python main.py --config configs/rabbit_watermelon.yaml --folder outputs/rabbit_w
 If you like our work, please cite our paper.
 
 ```bibtex
-
+@article{jeong2023ground,
+  title={Ground-A-Video: Zero-shot Grounded Video Editing using Text-to-image Diffusion Models},
+  author={Jeong, Hyeonho and Ye, Jong Chul},
+  journal={arXiv preprint arXiv:2310.01107},
+  year={2023}
+}
 ```
 
 ## Acknowledgement
