@@ -1,4 +1,4 @@
-# Ground-A-Video: Zero-shot Grounded Video Editing using Text-to-image Diffusion Models
+# Ground-A-Video: Zero-shot Grounded Video Editing using Text-to-image Diffusion Models (ICLR 2024)
 This repository contains the official pytorch implementation of [Ground-A-Video](https://arxiv.org/abs/2310.01107).
 <br/> 
 **[ICLR 2024] [Ground-A-Video: Zero-shot Grounded Video Editing using Text-to-image Diffusion Models](https://arxiv.org/abs/2310.01107)**
