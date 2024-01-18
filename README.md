@@ -132,11 +132,19 @@ python main.py --config configs/rabbit_watermelon.yaml --folder outputs/rabbit_w
 - `--nti`: Whether to perfrom Null-text Optimization after DDIM Inversion. Default is False.  
   (If your CUDA Version is 11.4, then you can set is as True. If your CUDA Version is 12.2 or higher, set it as False: The codes are implemented using fp16 dtypes but in 12.2 higher CUDA version, gradient backpropagation from nti incurs errors)
 
-## More Results
+## Results
 <table class="center">
   <tr>
     <td style="text-align:center;"><b>Input Videos</b></td>
     <td style="text-align:center;" colspan="1"><b>Output Videos</b></td>
+  </tr>
+  <tr>
+    <td><img src="https://ground-a-video.github.io/static/gifs/rabbit_watermelon/input.gif" width="384" height="384"></td>
+    <td><img src="https://ground-a-video.github.io/static/gifs/rabbit_watermelon/three3.gif" width="384" height="384"></td>
+  </tr>
+  <tr>
+    <td><img src="assets/dog_walking/input.gif" width="384" height="384"></td>
+    <td><img src="assets/dog_walking/output.gif" width="384" height="384"></td>
   </tr>
   <tr>
     <td><img src="https://ground-a-video.github.io/static/gifs/cat_flower/input.gif" width="384" height="384"></td>
