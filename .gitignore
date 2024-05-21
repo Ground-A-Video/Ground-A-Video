@@ -1,6 +1,7 @@
-annotator/
 control_v11f1p_sd15_depth/
+annotator/ckpts/ZoeD_M12_N.pt
 __pycache__/
+*__pycache__/*
 controlnet/
 gligen-inpainting-text-box/
 grounding_input/
