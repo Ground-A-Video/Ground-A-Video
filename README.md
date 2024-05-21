@@ -118,7 +118,7 @@ Pre-computed groundings, including bounding box coordinates and corresponding te
 Ground-A-Video is designed to be a training-free framework. To run the inference script, use the following command:
 
 ```bash
-python main.py --config configs/rabbit_watermelon.yaml --folder outputs/rabbit_watermelon
+python main.py --config video_configs/rabbit_watermelon.yaml --folder outputs/rabbit_watermelon
 ```
 #### Arguments
 - `--config`: Specifies the path to the configuration file. Modify the config files under `video_configs` as needed
